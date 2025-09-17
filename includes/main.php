@@ -17,7 +17,7 @@ class Main
             {
                 $_SESSION['msg'] = "Login realizado com sucesso!";
                 $_SESSION['msg_type'] = "success"; 
-                header("Location: /screens/dashboard.html"); 
+                header("Location: /screens/dashboard.php"); 
                 exit();
             }
             else
