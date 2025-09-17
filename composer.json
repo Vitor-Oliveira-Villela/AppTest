@@ -1,11 +1,9 @@
 {
-  "name": "AppTeste",
+  "name": "meu-projeto/site",
+  "description": "Meu site PHP",
   "require": {
     "php": "^8.2",
     "ext-pdo": "*",
     "ext-mysqli": "*"
-  },
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
   }
 }
