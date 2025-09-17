@@ -1,76 +1,107 @@
-/* Reset básico */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e0e0e0; /* cinza claro */
+    background-color: #f6f9fc;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.login-container {
-    background-color: #ffffff; /* branco suave */
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    width: 320px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.login-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-.login-container h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #333333; /* cinza escuro para o título */
-    font-weight: 600;
-}
-
-.login-container input[type="text"],
-.login-container input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: #f9f9f9;
-    transition: border 0.3s ease, background-color 0.3s ease;
-}
-
-.login-container input[type="text"]:focus,
-.login-container input[type="password"]:focus {
-    border-color: #a0a0a0;
+.login-card {
     background-color: #ffffff;
-    outline: none;
+    padding: 40px 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.login-container input[type="submit"] {
+.login-card:hover {
+    transform: translateY(-4px);
+}
+
+.login-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e1e1e;
+    margin-bottom: 6px;
+}
+
+.subtext {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #999;
+    outline: none;
+    background-color: #fff;
+}
+
+.btn-login {
     width: 100%;
     padding: 12px;
-    background-color: #6c757d; /* cinza neutro */
-    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #1e293b;
+    color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
-.login-container input[type="submit"]:hover {
-    background-color: #5a6268;
+.btn-login:hover {
+    background-color: #0f172a;
 }
 
-.login-container hr {
-    margin: 20px 0;
-    border: 0.5px solid #ddd;
+.links {
+    margin-top: 18px;
+    font-size: 0.87rem;
+    color: #555;
+}
+
+.links a {
+    color: #1e40af;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.links a:hover {
+    color: #1d4ed8;
+}
+
+.links span {
+    margin: 0 8px;
+    color: #aaa;
 }
