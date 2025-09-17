@@ -1,0 +1,8 @@
+{
+  "name": "seu-projeto",
+  "require": {
+    "php": "^8.2",
+    "ext-pdo": "*",
+    "ext-mysqli": "*"
+  }
+}

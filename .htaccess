@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Redirecionar tudo para index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Permitir acesso a arquivos estáticos
+<FilesMatch "\.(html|css|js|png|jpg|jpeg|gif|ico)$">
+    RewriteEngine Off
+</FilesMatch>
