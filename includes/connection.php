@@ -6,7 +6,7 @@ class ConnectionDB
     {
         $host = "shinkansen.proxy.rlwy.net";
         $port = "54366"; 
-        $db   = "railway";
+        $db   = "teste";
         $user = "root";
         $pass = "nsACvnSKjswPHBQnVARnQJbPzYpYidSA";
 
