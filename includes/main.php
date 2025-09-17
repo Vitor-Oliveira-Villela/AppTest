@@ -24,7 +24,7 @@ class Main
             {
                 $_SESSION['msg'] = "Usuário ou senha incorretos!";
                 $_SESSION['msg_type'] = "error";
-                header("Location: index.php"); 
+                header("Location: ../index.php"); 
                 exit();
             }
 
