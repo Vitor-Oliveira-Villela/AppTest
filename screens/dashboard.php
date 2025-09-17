@@ -5,87 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Dashboard</h2>
-        <ul>
-            <li>Home</li>
-            <li>Usuários</li>
-            <li>Relatórios</li>
-            <li>Configurações</li>
-        </ul>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">DengueFoco</div>
+            <div class="user">Olá, Vitor!</div>
+            <nav>
+                <a href="#" class="active">Mapa Geral</a>
+                <a href="#">Focos</a>
+                <a href="#">Casos</a>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header>
+                <h1>Monitoramento Cruzeiro-SP</h1>
+                <p>Acompanhe focos e casos de doenças em tempo real</p>
+            </header>
+
+            <!-- Summary Cards -->
+            <div class="cards">
+                <div class="card pendente">
+                    <p>Focos Pendentes</p>
+                    <h2>8</h2>
+                </div>
+                <div class="card confirmado">
+                    <p>Focos Confirmados</p>
+                    <h2>2</h2>
+                </div>
+                <div class="card casos">
+                    <p>Casos Dengue</p>
+                    <h2>3</h2>
+                </div>
+                <div class="card total">
+                    <p>Total Casos</p>
+                    <h2>7</h2>
+                </div>
+            </div>
+
+            <!-- Map and Recent Activity -->
+            <div class="content-area">
+                <div class="map-container" id="map"></div>
+                <div class="activity">
+                    <h3>Atividade Recente</h3>
+                    <ul>
+                        <li class="resolvido">
+                            <strong>pneus</strong> - Pneus velhos em borracharia a céu aberto.<br>
+                            <span>Jardim Paraíso</span>
+                        </li>
+                        <li class="confirmado">
+                            <strong>lixo acumulado</strong> - Terreno baldio com sacos de lixo.<br>
+                            <span>Vila Romana</span>
+                        </li>
+                        <li class="pendente">
+                            <strong>água parada</strong> - Calha entupida acumulando água.<br>
+                            <span>Vila Nova</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
     </div>
 
-    <div class="main-content">
-        <header>
-            <h1>Visão Geral</h1>
-        </header>
-
-        <div class="cards">
-            <div class="card">
-                <h3>Usuários</h3>
-                <p>1200</p>
-            </div>
-            <div class="card">
-                <h3>Vendas</h3>
-                <p>R$ 45.300</p>
-            </div>
-            <div class="card">
-                <h3>Novos Cadastros</h3>
-                <p>75</p>
-            </div>
-            <div class="card">
-                <h3>Atividade</h3>
-                <p>Alta</p>
-            </div>
-        </div>
-
-        <div class="charts">
-            <div class="chart-container">
-                <canvas id="salesChart"></canvas>
-            </div>
-            <div class="chart-container">
-                <canvas id="usersChart"></canvas>
-            </div>
-        </div>
-
-        <div class="table-container">
-            <h2>Últimos Usuários</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Data</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Ana Silva</td>
-                        <td>ana@email.com</td>
-                        <td>Ativo</td>
-                        <td>12/09/2025</td>
-                    </tr>
-                    <tr>
-                        <td>Bruno Costa</td>
-                        <td>bruno@email.com</td>
-                        <td>Inativo</td>
-                        <td>10/09/2025</td>
-                    </tr>
-                    <tr>
-                        <td>Carla Souza</td>
-                        <td>carla@email.com</td>
-                        <td>Ativo</td>
-                        <td>09/09/2025</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <script src= __DIR__ . "/dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script>
+        // Inicializa mapa Leaflet
+        const map = L.map('map').setView([-23.5489, -45.325], 13); // coordenadas de Cruzeiro-SP
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+    </script>
 </body>
 </html>
