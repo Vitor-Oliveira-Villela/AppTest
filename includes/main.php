@@ -35,3 +35,6 @@ class Main
         }
     }
 }
+
+$main = new Main();
+$main->Login();
