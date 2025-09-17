@@ -1,6 +1,6 @@
 <?php
 
-require_once("includes/connection.php");
+require_once(__DIR__ . "/connection.php");
 
 class Querys
 {

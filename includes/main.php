@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once("includes/querys.php");
+require_once(__DIR__ . "/querys.php");
 class Main
 {
     public function Login()
@@ -17,7 +17,7 @@ class Main
             {
                 $_SESSION['msg'] = "Login realizado com sucesso!";
                 $_SESSION['msg_type'] = "success"; 
-                header("Location: screens/dashboard.html"); 
+                header("Location: /screens/dashboard.html"); 
                 exit();
             }
             else

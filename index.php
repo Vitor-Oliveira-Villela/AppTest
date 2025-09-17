@@ -11,7 +11,7 @@
     <div class="login-container">
         <h2>Login</h2>
         <!-- Formulário enviando via POST -->
-        <form action="includes/main.php" method="POST">
+        <form action="/includes/main.php" method="POST">
             <input type="text" name="username" placeholder="Usuário" required>
             <input type="password" name="password" placeholder="Senha" required>
             <input type="submit" value="Entrar">
