@@ -14,7 +14,7 @@ class ConnectionDB
             // Configura o PDO para lançar exceções em caso de erro
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            echo "Conexão bem-sucedida!";
+            return $conn;
         } catch (PDOException $e) {
             echo "Falha na conexão: " . $e->getMessage();
         }

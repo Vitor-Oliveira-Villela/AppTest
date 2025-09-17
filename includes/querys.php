@@ -4,14 +4,12 @@ require_once("includes/connection.php");
 
 class Querys
 {
-
-    private $conn = new ConnectionDB();
-
     public function validaLogin($username, $password)
     {
-        $this->conn->connect();
+        $conn = new ConnectionDB();
+        $pdo = $conn->connect();
 
-        $qry = $this->conn->prepare("SELECT * FROM users WHERE username = :username");
+        $qry = $pdo->prepare("SELECT * FROM users WHERE username = :username");
         $qry->execute(["username" => $username]);
         $result = $qry->fetch(PDO::FETCH_ASSOC);
 
